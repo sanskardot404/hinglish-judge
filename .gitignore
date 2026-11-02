@@ -1,0 +1,31 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+
+# Model-call cache (large, regenerable)
+results/cache/
+
+# Notebooks / editors / OS
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private: personal learning, planning, agent instructions
+START_HERE.md
+AGENTS.md
+CLAUDE.md
+.claude/
+notes/
+prompts/
