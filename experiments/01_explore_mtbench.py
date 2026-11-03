@@ -43,6 +43,9 @@ def pairwise_agreement(df: pd.DataFrame, exclude_ties: bool = False) -> dict[str
     `chance_agreement` is that chance level, sum(p_i^2) over label shares p_i, for context.
     """
     data = df[df["winner"] != "tie"] if exclude_ties else df
+    # Keep only items with 2+ labels, so the chance level below is computed on exactly
+    # the same rows that the agreement number uses (tie filter first: it can shrink items).
+    data = data[data.groupby(ITEM_KEY)["winner"].transform("size") >= 2]
     agree = total = items = 0
     for _, labels in data.groupby(ITEM_KEY)["winner"]:
         k = len(labels)
