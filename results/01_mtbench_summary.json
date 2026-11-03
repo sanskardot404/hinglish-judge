@@ -120,7 +120,7 @@
     "items_with_2plus_judges": 761,
     "annotator_pairs": 1199,
     "agreement": 0.646,
-    "chance_agreement": 0.349
+    "chance_agreement": 0.351
   },
   "agreement_without_ties": {
     "items_with_2plus_judges": 536,

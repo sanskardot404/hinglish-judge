@@ -49,6 +49,13 @@ def test_excluding_ties_drops_tie_labels() -> None:
     assert explore.pairwise_agreement(df, exclude_ties=True)["annotator_pairs"] == 1
 
 
+def test_chance_uses_only_multi_judge_items() -> None:
+    # Item 1: two judges, both model_a. Items 2-4: one judge each, all model_b.
+    # Chance must come from item 1 only: shares {model_a: 1.0} -> 1.0, not ~0.63 from all 5 rows.
+    df = _df([(1, "model_a"), (1, "model_a"), (2, "model_b"), (3, "model_b"), (4, "model_b")])
+    assert explore.pairwise_agreement(df)["chance_agreement"] == 1.0
+
+
 def test_label_distribution_percent() -> None:
     out = explore.label_distribution(_df([(1, "model_a"), (2, "model_a"), (3, "tie"), (4, "model_b")]))
     assert out["counts"]["model_a"] == 2 and out["percent"]["model_a"] == 50.0

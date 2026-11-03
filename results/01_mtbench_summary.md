@@ -14,7 +14,7 @@ Dataset `lmsys/mt_bench_human_judgments`, split `human`: 3355 rows, 80 questions
 
 | labels used | items with 2+ judges | annotator pairs | agreement | chance level |
 |---|---|---|---|---|
-| with ties | 761 | 1199 | 0.646 | 0.349 |
+| with ties | 761 | 1199 | 0.646 | 0.351 |
 | ties removed | 536 | 779 | 0.823 | 0.5 |
 
 Chance level = agreement expected if annotators labelled independently with the same label shares. Agreement only means something relative to it.
