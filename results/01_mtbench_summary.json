@@ -1,0 +1,160 @@
+{
+  "dataset": "lmsys/mt_bench_human_judgments",
+  "split": "human",
+  "rows": 3355,
+  "distinct_questions": 80,
+  "distinct_items": 2396,
+  "judges_per_item": {
+    "1": 1635,
+    "2": 599,
+    "3": 132,
+    "4": 24,
+    "5": 6
+  },
+  "annotators": {
+    "expert_24": 205,
+    "author_4": 204,
+    "author_0": 180,
+    "expert_0": 144,
+    "author_3": 106,
+    "expert_9": 103,
+    "author_2": 102,
+    "expert_27": 48,
+    "expert_50": 48,
+    "expert_47": 48,
+    "expert_55": 48,
+    "expert_40": 46,
+    "expert_26": 46,
+    "expert_25": 46,
+    "author_5": 45,
+    "expert_36": 45,
+    "expert_31": 44,
+    "expert_2": 44,
+    "expert_1": 44,
+    "expert_12": 44,
+    "expert_23": 44,
+    "expert_42": 44,
+    "expert_8": 44,
+    "expert_35": 44,
+    "expert_32": 44,
+    "expert_6": 44,
+    "expert_7": 44,
+    "expert_49": 44,
+    "expert_29": 44,
+    "author_6": 44,
+    "expert_41": 44,
+    "expert_38": 44,
+    "expert_53": 44,
+    "expert_28": 43,
+    "expert_51": 43,
+    "expert_22": 43,
+    "expert_15": 43,
+    "expert_13": 43,
+    "expert_14": 43,
+    "expert_17": 42,
+    "expert_37": 42,
+    "expert_45": 42,
+    "expert_11": 42,
+    "expert_43": 42,
+    "expert_10": 42,
+    "expert_46": 42,
+    "expert_20": 42,
+    "expert_57": 42,
+    "expert_21": 42,
+    "expert_34": 42,
+    "expert_16": 42,
+    "expert_56": 42,
+    "expert_19": 42,
+    "expert_5": 42,
+    "expert_4": 42,
+    "expert_39": 42,
+    "expert_44": 42,
+    "expert_48": 41,
+    "expert_3": 40,
+    "expert_33": 12,
+    "expert_18": 10,
+    "expert_54": 10,
+    "expert_30": 6,
+    "author_1": 6,
+    "expert_52": 4
+  },
+  "label_distribution": {
+    "counts": {
+      "model_a": 1293,
+      "model_b": 1282,
+      "tie": 780
+    },
+    "percent": {
+      "model_a": 38.5,
+      "model_b": 38.2,
+      "tie": 23.2
+    }
+  },
+  "label_distribution_by_turn": {
+    "1": {
+      "counts": {
+        "model_a": 656,
+        "model_b": 628,
+        "tie": 405
+      },
+      "percent": {
+        "model_a": 38.8,
+        "model_b": 37.2,
+        "tie": 24.0
+      }
+    },
+    "2": {
+      "counts": {
+        "model_b": 654,
+        "model_a": 637,
+        "tie": 375
+      },
+      "percent": {
+        "model_b": 39.3,
+        "model_a": 38.2,
+        "tie": 22.5
+      }
+    }
+  },
+  "agreement_with_ties": {
+    "items_with_2plus_judges": 761,
+    "annotator_pairs": 1199,
+    "agreement": 0.646,
+    "chance_agreement": 0.351
+  },
+  "agreement_without_ties": {
+    "items_with_2plus_judges": 536,
+    "annotator_pairs": 779,
+    "agreement": 0.823,
+    "chance_agreement": 0.5
+  },
+  "examples": [
+    {
+      "question_id": 159,
+      "turn": 1,
+      "model_a": "gpt-3.5-turbo",
+      "model_b": "claude-v1",
+      "winner": "model_b",
+      "judge": "author_0",
+      "prompt": "What are some business etiquette norms when doing business in Japan?"
+    },
+    {
+      "question_id": 123,
+      "turn": 1,
+      "model_a": "llama-13b",
+      "model_b": "gpt-3.5-turbo",
+      "winner": "model_b",
+      "judge": "author_4",
+      "prompt": "Write a simple website in HTML. When a user clicks the button, it shows a random joke from a list of 4 jokes."
+    },
+    {
+      "question_id": 160,
+      "turn": 1,
+      "model_a": "llama-13b",
+      "model_b": "alpaca-13b",
+      "winner": "model_a",
+      "judge": "expert_22",
+      "prompt": "Suggest five award-winning documentary films with brief background descriptions for aspiring filmmakers to study."
+    }
+  ]
+}
